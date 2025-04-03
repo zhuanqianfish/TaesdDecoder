@@ -1,9 +1,9 @@
-from .nodes import TaesdDecoder
+from .nodes import TaesdVAEDecoder
 
 NODE_CLASS_MAPPINGS = {
-    "TaesdDecoder": "TaesdDecoder",
+    "TaesdVAEDecoder": TaesdVAEDecoder,
 }
 
 NODE_DISPLAY_NAME_MAPPINGS = {
-    "TaesdDecoder": "TaesdDecoder",
+    "TaesdVAEDecoder": "TaesdVAEDecoder",
 }

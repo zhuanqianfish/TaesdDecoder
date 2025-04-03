@@ -1,15 +1,12 @@
-
 from typing import Tuple
-
 import torch
 import folder_paths
 from .taesd import TAESD
 
-
 # thanks for madebyollin's taesd code. https://github.com/madebyollin/taesd
 # you need donwload taesd_decoder.pth and  taesdxl_decoder.pth to vae_approx folder first.
 
-class TaesdDecoder:
+class TaesdVAEDecoder:
     @classmethod
     def INPUT_TYPES(cls):  # type: ignore
         return {
@@ -22,8 +19,8 @@ class TaesdDecoder:
     RETURN_TYPES = ("IMAGE",)
     FUNCTION = "decode"
     OUTPUT_IS_LIST = (False,)
+
     CATEGORY = "latent"
-    OUTPUT_TOOLTIPS = ("use TAESD decoded image.you need donwload taesd_decoder.pth and  taesdxl_decoder.pth to vae_approx folder first.\n It will result in a slight loss of image quality and a significant decrease in peak video memory during decoding.",)
     DESCRIPTION = "use TAESD decodes latent images back into pixel space images."
 
     def __init__(self):
