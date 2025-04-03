@@ -1,0 +1,14 @@
+[project]
+name = "taesddecoder"
+description = "use TAESD decoded image.you need donwload taesd_decoder.pth and taesdxl_decoder.pth to vae_approx folder first.\n It will result in a slight loss of image quality and a significant decrease in peak video memory during decoding."
+version = "1.0.0"
+license = {file = "LICENSE"}
+
+[project.urls]
+Repository = "https://github.com/zhuanqianfish/TaesdDecoder"
+#  Used by Comfy Registry https://comfyregistry.org
+
+[tool.comfy]
+PublisherId = ""
+DisplayName = "TaesdDecoder"
+Icon = ""
